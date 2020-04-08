@@ -8,6 +8,7 @@ def handler(event, context):
             Bucket="as2-test-lahiru",
             MaxKeys=10
         )
+        print(data)
     except BaseException as e:
         print(e)
         raise(e)
