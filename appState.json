@@ -74,13 +74,65 @@
             "eventTemplate": "hello-world"
           }
         }
+      },
+      "252ac998-573b-4d04-a030-1144d9bc60c1": {
+        "id": "252ac998-573b-4d04-a030-1144d9bc60c1",
+        "parent": null,
+        "name": "thistestfile",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "3c5a11d3-504b-42d3-960a-3080d6b4b80d",
+          "c6b7e53d-31c9-467b-a29f-180dcc3ea16f"
+        ],
+        "isRemovable": true,
+        "filePath": "thistestfile"
+      },
+      "3c5a11d3-504b-42d3-960a-3080d6b4b80d": {
+        "id": "3c5a11d3-504b-42d3-960a-3080d6b4b80d",
+        "parent": "252ac998-573b-4d04-a030-1144d9bc60c1",
+        "name": "thirdfunction.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "thistestfile/thirdfunction.py",
+        "cursor": {
+          "lineNumber": 1,
+          "column": 1
+        },
+        "config": {
+          "runtime": "python3.8",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "thirdfunctionchange"
+        },
+        "triggers": [
+          {
+            "resourceName": "cweKumu",
+            "config": {}
+          }
+        ]
+      },
+      "c6b7e53d-31c9-467b-a29f-180dcc3ea16f": {
+        "id": "c6b7e53d-31c9-467b-a29f-180dcc3ea16f",
+        "parent": "252ac998-573b-4d04-a030-1144d9bc60c1",
+        "name": "__init__.py",
+        "type": "PYTHON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "thistestfile/__init__.py"
       }
     },
     "openFiles": [
       "23574691-b5af-44ea-aafb-7e0750f48c61",
-      "766dfeea-01a6-4bdb-af78-78bf115ffe94"
+      "766dfeea-01a6-4bdb-af78-78bf115ffe94",
+      "3c5a11d3-504b-42d3-960a-3080d6b4b80d"
     ],
-    "currentFileId": "766dfeea-01a6-4bdb-af78-78bf115ffe94",
+    "currentFileId": "3c5a11d3-504b-42d3-960a-3080d6b4b80d",
     "resources": {
       "alexaSK2062aea9dc3b43d0b4f3d47952090b10": {
         "name": "alexaSK2062aea9dc3b43d0b4f3d47952090b10",
@@ -160,6 +212,37 @@
             "streamArn": "arn:aws:dynamodb:us-east-1:318300609668:table/hirutest/stream/2020-01-02T08:32:20.233"
           }
         }
+      },
+      "cweKumu": {
+        "name": "cweKumu",
+        "type": "CLOUD_WATCH",
+        "config": {
+          "mode": 1,
+          "arn": "arn:aws:events:us-east-1:318300609668:rule/Kumu",
+          "name": "Kumu",
+          "eventBusName": "default"
+        }
+      },
+      "sqshiruTest": {
+        "name": "sqshiruTest",
+        "type": "SQS",
+        "config": {
+          "mode": 1,
+          "existing": true,
+          "name": "hiru-test",
+          "url": "https://sqs.us-east-1.amazonaws.com/318300609668/hiru-test",
+          "selectedRegion": "us-east-1",
+          "deliveryDelay": "0",
+          "deliveryDelayUnit": "seconds",
+          "queueType": "standardQueue",
+          "defaultVisibilityTimeout": "30",
+          "defaultVisibilityTimeoutUnit": "seconds",
+          "messageRetentionPeriod": "345600",
+          "messageRetentionPeriodUnit": "seconds",
+          "maximumMessageSize": 256,
+          "receiveMessageWaitTime": "0",
+          "queueARN": "arn:aws:sqs:us-east-1:318300609668:hiru-test"
+        }
       }
     },
     "customTemplate": {
@@ -197,7 +280,7 @@
     "platform": "AWS",
     "language": "python",
     "platformRegions": {},
-    "lastSave": 1586342384192
+    "lastSave": 1586345838363
   },
   "VCS_STATE": {
     "provider": "GitHub",
