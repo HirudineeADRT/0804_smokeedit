@@ -15,6 +15,7 @@ def handler(event, context):
                 }
             }
         )
+        print('***********data*************this is aedit')
         print(data)
     except BaseException as e:
         print(e)

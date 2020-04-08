@@ -33,7 +33,7 @@
             "id": "bde82781-dbaf-48ef-a21a-75ad09dc85e6",
             "name": "Test event",
             "functionId": "23574691-b5af-44ea-aafb-7e0750f48c61",
-            "event": "{\"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\"}",
+            "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
             "eventTemplate": "hello-world"
           }
         }
@@ -48,8 +48,8 @@
         "isRemovable": true,
         "filePath": "APITrigger.py",
         "cursor": {
-          "lineNumber": 18,
-          "column": 19
+          "lineNumber": 1,
+          "column": 1
         },
         "config": {
           "runtime": "python3.8",
@@ -64,7 +64,16 @@
             "resourceName": "apigusEast1hiru1312newprodreleaseany",
             "config": {}
           }
-        ]
+        ],
+        "testCases": {
+          "a4d27acc-5dea-48c7-9542-9c5c7290bca5": {
+            "id": "a4d27acc-5dea-48c7-9542-9c5c7290bca5",
+            "name": "Test event",
+            "functionId": "766dfeea-01a6-4bdb-af78-78bf115ffe94",
+            "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
+            "eventTemplate": "hello-world"
+          }
+        }
       }
     },
     "openFiles": [
@@ -188,7 +197,7 @@
     "platform": "AWS",
     "language": "python",
     "platformRegions": {},
-    "lastSave": 1586342139579
+    "lastSave": 1586342384192
   },
   "VCS_STATE": {
     "provider": "GitHub",
